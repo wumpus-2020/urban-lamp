@@ -15,4 +15,24 @@ public class GameControl : MonoBehaviour
     {
         
     }
+    
+    public void callTrivia()
+    {
+
+    }
+
+    public void movePlayer()
+    {
+
+    }
+
+    public void changeBatPose()
+    {
+
+    }
+
+    public void changeWumpusPose()
+    {
+
+    }
 }
