@@ -16,7 +16,7 @@ public class GameControl : MonoBehaviour
         
     }
     
-    public void callTrivia()
+    public void getTrivia()
     {
 
     }
@@ -32,6 +32,16 @@ public class GameControl : MonoBehaviour
     }
 
     public void changeWumpusPose()
+    {
+
+    }
+
+    public void getCoins()
+    {
+
+    }
+
+    public void getArrows()
     {
 
     }
