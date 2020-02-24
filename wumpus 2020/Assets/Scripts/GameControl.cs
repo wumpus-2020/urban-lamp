@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class GameControl : MonoBehaviour
 {
+
+    public enum GameState
+    {
+        PRETURN, PLAYERTURN, POSTTURN
+    }
+
+    public enum PlayerState
+    {
+        PLAYING, DEAD
+    }
+
     // Start is called before the first frame update
     void Start()
     {
