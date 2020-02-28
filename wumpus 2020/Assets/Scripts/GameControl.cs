@@ -10,6 +10,9 @@ public class GameControl : MonoBehaviour
     private Player player1;
     private GameLocation gameLoc;
     private HighScore highScore;
+    private GUI UI;
+
+    private int currentCave;
 
 
     public enum GameState
@@ -30,14 +33,17 @@ public class GameControl : MonoBehaviour
         player1 = new Player();
         gameLoc = new GameLocation();
         highScore = new HighScore();
+        UI = new GUI();
+
+        currentCave = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        currentCave = cave.getCave();
     }
-    
+
     public void getTrivia()
     {
 
@@ -45,26 +51,19 @@ public class GameControl : MonoBehaviour
 
     public void movePlayer()
     {
-
+        int nextRoom = UI.getMovementInput();
+        int playerPose = player1.moveRoom(nextRoom);
     }
 
     public void changeBatPose()
     {
-
+        int newRoom = gameLoc.changeBatRoom();
+        UI.moveBat(newRoom);
     }
 
     public void changeWumpusPose()
     {
-
-    }
-
-    public void getCoins()
-    {
-
-    }
-
-    public void getArrows()
-    {
-
+        int newRoom = gameLoc.changeWumpusRoom();
+        UI.moveWumpus(newRoom);
     }
 }
